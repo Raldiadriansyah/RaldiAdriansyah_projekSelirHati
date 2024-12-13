@@ -8,6 +8,7 @@ use Illuminate\Auth\Middleware\Authenticate;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LaporanPenjualan;
 
 
 
@@ -17,6 +18,7 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::resource('Penjualan', PenjualanController::class);
     Route::resource('Pengeluaran', PengeluaranController::class);
     Route::resource('user', UserController::class);
+    Route::resource('laporan-penjualan', LaporanPenjualan::class);
 });
 
 Route::resource('pesanan', PesananController::class);

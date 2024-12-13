@@ -17,4 +17,15 @@ class UserController extends Controller
         flash('Data Dihapus')->success();
         return back();
     }
+    public function update(Request $request, string $id)
+    {
+            $requestData = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+        ]);
+        $user = \App\Models\User::findOrFail($id);
+        $user->update($requestData);
+        flash('Data Menu sudah di Ubah')->success();
+        return back();
+    }
 }

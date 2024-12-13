@@ -10,7 +10,7 @@
                 style="margin-right: 12px">Baru</a>
             <a href="/Penjualan?status=diproses" class="btn btn-primary{{ request('status') == 'diproses' ? 'active' : '' }}"
                 style="margin-right: 12px">Diproses</a>
-            <a href="/Penjualan?status=selesai" class="btn btn-primary{{ request('status') == 'lainnya' ? 'active' : '' }}"
+            <a href="/Penjualan?status=selesai" class="btn btn-primary{{ request('status') == 'selesai' ? 'active' : '' }}"
                 style="margin-right: 12px">Selesai</a>
                 <br>
                 <br>
@@ -101,13 +101,17 @@
                     <div class="form-group mt-1 mb-3">
                         <label for="status">Status</label>
                         <select name="status" id="status" class="form-control js-example-basic-single">
-                            <option value="" disabled {{ $item->status == null ? 'selected' : '' }}>-----
-                                Pilih Stok ------</option>
-                            <option value="baru" {{ $item->status == 'baru' ? 'selected' : '' }}>baru</option>
-                            <option value="diproses" {{ $item->status == 'diproses' ? 'selected' : '' }}>diproses
-                            </option>
-                            <option value="selesai" {{ $item->status == 'selesai' ? 'selected' : '' }}>selesai
-                            </option>
+                            <option value="" disabled {{ $item->status == null ? 'selected' : '' }}>----- Pilih Status ------</option>
+                            @if ($item->status == 'selesai')
+                                <option value="" selected>Status sudah selesai</option>
+                            @elseif ($item->status == 'diproses')
+                                <option value="diproses" {{ $item->status == 'diproses' ? 'selected' : '' }}>Diproses</option>
+                                <option value="selesai" {{ $item->status == 'selesai' ? 'selected' : '' }}>Selesai</option>
+                            @else
+                                <option value="baru" {{ $item->status == 'baru' ? 'selected' : '' }}>Baru</option>
+                                <option value="diproses" {{ $item->status == 'diproses' ? 'selected' : '' }}>Diproses</option>
+                                <option value="selesai" {{ $item->status == 'selesai' ? 'selected' : '' }}>Selesai</option>
+                            @endif
                         </select>
                         <span class="text-danger">{{ $errors->first('status') }}</span>
                     </div>
