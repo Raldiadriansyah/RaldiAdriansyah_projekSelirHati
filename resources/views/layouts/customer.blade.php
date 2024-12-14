@@ -246,6 +246,24 @@
         </script>
     @endif
 
+    <script type="text/javascript">
+        function showOutOfStockAlert() {
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Stok kosong',
+                text: 'Maaf, Item saat ini tidak tersedia.',
+                showConfirmButton: true,
+                backdrop: false,  
+            });
+        }
+    </script>
+    
+      <script type="text/javascript">
+        function closeModal() {      
+            $('#modalTambah').modal('hide');
+        }
+    </script>
 
 
 </body>

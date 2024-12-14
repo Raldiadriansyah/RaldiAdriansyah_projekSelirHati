@@ -46,6 +46,7 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="/sneat/assets/vendor/fonts/boxicons.css" />
@@ -66,10 +67,11 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/sneat/assets/js/config.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
+    
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -78,10 +80,10 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
  
 
-          <div class="menu-inner-shadow" ></div>
+         
           
           <ul class="menu-inner py-1">
-            <span class="app-brand-text demo menu-text fw-bolder ms-2" ><img src="/sneat/assets/img/backgrounds/warkop.png" alt="" style="width: 200px; margin: auto; margin-left: 20px"></span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2" ><img src="/sneat/assets/img/backgrounds/warkop.png" alt="" style="width: 200px; margin: auto; margin-left: 20px; margin-bottom: 20px"></span>
             <!-- Dashboard -->
             <li class="menu-item">
               <a href="/Home" class="menu-link">
@@ -152,14 +154,14 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="/Menu/create" class="menu-link">
+                  <a href="/laporan-pengeluaran/create" class="menu-link">
                     <div data-i18n="Account">Laporan</div>
                   </a>
                 </li>
               </ul>
             </li>
             @if (auth()->user() && auth()->user()->role == 'owner')
-              <li class="menu-header small text-uppercase" style="margin-top: 2px; margin-bottom: 2px">
+                <li class="menu-header small text-uppercase" style="margin-top: 2px; margin-bottom: 2px">
                   <span class="menu-header-text">User</span>
                 </li>
                 <li class="menu-item">
@@ -237,15 +239,15 @@
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
-          <div class="content-wrapper">
+          
             <!-- Content -->
 
-            <div class="container-xxl flex-grow-1 container-p-y">
-              @include('flash::message')
+            <div class="container-xxl container-p-y">
+              
               @yield('content')
             </div>
               <!--/ Layout Demo -->
-            </div>
+      
             <!-- / Content -->
 
             <!-- Footer -->
@@ -297,6 +299,71 @@
         })
     </script>
     @yield('js')
+
+    @if (session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '{{ session('success') }}',
+                showConfirmButton: false,
+                timer: 2500,
+                backdrop: false,
+            });
+        });
+    </script>
+    @endif
+    
+    @if (session('error'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '{{ session('error') }}',
+                showConfirmButton: false,
+                timer: 2500,
+                backdrop: false,
+            });
+        });
+    </script>
+    @endif
+
+    <script type="text/javascript">
+      $(function() {
+          $(document).on('click', '#delete', function(e) {
+              let form = $(this).closest("form");
+  
+              e.preventDefault(); // Mencegah form langsung submit
+              Swal.fire({
+                  title: "Are you sure?",
+                  text: "You won't be able to revert this!",
+                  icon: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#3085d6",
+                  cancelButtonColor: "#d33",
+                  confirmButtonText: "Yes, delete it!",
+                  cancelButtonText: "Cancel",
+                  backdrop: false,
+              }).then((result) => {
+                  if (result.isConfirmed) {
+                      // Submit form setelah konfirmasi
+                      form.submit(); 
+                 
+                  }
+              });
+          });
+      });
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@yield('scripts')
+
+
+    
+    
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>

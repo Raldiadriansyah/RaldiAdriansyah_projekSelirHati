@@ -56,7 +56,11 @@ class MenuController extends Controller
         $menu->fill(attributes: $requestData);
         $menu->foto = $request->file('foto')->store('Menu', 'public');
         $menu->save();
-        flash(message: 'Menu Berhasil Ditambahkan')->success();
+        if ($menu) {
+            session()->flash('success', 'Menu berhasil ditambahkan!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Menu gagal ditambahkan!');
+        }
         return redirect('/Menu');
     }
 
@@ -96,7 +100,11 @@ class MenuController extends Controller
             $menu->foto = $request->file('foto')->store('Menu', 'public');
         }
         $menu->save();
-        flash('Data Menu sudah di Ubah')->success();
+        if ($menu) {
+            session()->flash('success', 'Menu berhasil diubah!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Menu gagal diubah!');
+        }
         return redirect('/Menu');
     }
 
@@ -110,7 +118,11 @@ class MenuController extends Controller
             Storage::delete($menu->foto);
         }
         $menu->delete();
-        flash('Data Menu Dihapus')->success();
+        if ($menu) {
+            session()->flash('success', 'Menu berhasil dihapus!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Menu gagal dihapus!');
+        }
         return back();
     }
 }

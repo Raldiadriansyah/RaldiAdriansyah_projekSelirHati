@@ -33,7 +33,11 @@
                         <td> {{ $item->Menu->harga }}</td>
                         <td> {{ $item->jumlah }}</td>
                         <td> {{ $item->total }}</td>
-                        <td style="color: 	#7FFF00"> {{ $item->status }}</td>
+                        <td style="
+                        color: 
+                            {{ $item->status == 'baru' ? '#7FFF00' : ($item->status == 'diproses' ? '#FFC107' : ($item->status == 'selesai' ? '#0D6EFD' : '#000')) }}">
+                        {{ $item->status }}
+                    </td>
                         <td>{{ $item->User->name ?? ' ----- ' }}</td>
                         <td>
                             <a href="#modalEdit{{ $item->id }}" class="btn btn-warning btn-sm ml-2"  data-toggle="modal" data-bs-toggle="modal">Edit</a>

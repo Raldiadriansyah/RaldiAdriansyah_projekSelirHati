@@ -11,9 +11,11 @@
                     </h2>
                     <p class="price"><span>Rp.{{ $item->harga }}</span></p>
                     <p>
-                        <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary"
-                            data-toggle="modal" data-bs-toggle="modal">Pesan</a>
-
+                        @if ($item->stok == 'Tersedia')
+                            <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
+                        @else
+                            <a href="#" type="button" class="btn btn-danger btn-outline-danger" onclick="showOutOfStockAlert()">Pesan</a>
+                        @endif
                     </p>
                 </div>
             </div>
@@ -33,7 +35,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalTambahLabel">Tambah Pesanan</h5>
-                            <button type="button" class="btn-close" onclick="window.location.href='/pesanan';" aria-label="Close"></button>
+                            <a href="" onclick="closeModal()"></a>
                         </div>
 
                         <div class="modal-body">
@@ -69,8 +71,13 @@
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
                     <p class="price"><span>${{ $item->harga }}</span></p>
-                    <p><a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary"
-                        data-toggle="modal" data-bs-toggle="modal">Pesan</a></p>
+                    <p>
+                        @if ($item->stok == 'Tersedia')
+                            <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
+                        @else
+                            <a href="#" type="button" class="btn btn-danger btn-outline-danger" onclick="showOutOfStockAlert()">Pesan</a>
+                        @endif
+                    </p>
                 </div>
             </div>
             <div class="text">
@@ -123,8 +130,13 @@
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
                     <p class="price"><span>${{ $item->harga }}</span></p>
-                    <p><a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary"
-                        data-toggle="modal" data-bs-toggle="modal">Pesan</a></p>
+                    <p>
+                        @if ($item->stok == 'Tersedia')
+                            <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
+                        @else
+                            <a href="#" type="button" class="btn btn-danger btn-outline-danger" onclick="showOutOfStockAlert()">Pesan</a>
+                        @endif
+                    </p>
                 </div>
             </div>
             <div class="text">
@@ -177,8 +189,13 @@
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
                     <p class="price"><span>${{ $item->harga }}</span></p>
-                    <p><a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary"
-                        data-toggle="modal" data-bs-toggle="modal">Pesan</a></p>
+                    <p>
+                        @if ($item->stok == 'Tersedia')
+                            <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
+                        @else
+                            <a href="#" type="button" class="btn btn-danger btn-outline-danger" onclick="showOutOfStockAlert()">Pesan</a>
+                        @endif
+                    </p>
                 </div>
             </div>
             <div class="text">
@@ -231,8 +248,13 @@
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
                     <p class="price"><span>${{ $item->harga }}</span></p>
-                    <p><a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary"
-                        data-toggle="modal" data-bs-toggle="modal">Pesan</a></p>
+                    <p>
+                        @if ($item->stok == 'Tersedia')
+                            <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
+                        @else
+                            <a href="#" type="button" class="btn btn-danger btn-outline-danger" onclick="showOutOfStockAlert()">Pesan</a>
+                        @endif
+                    </p>
                 </div>
             </div>
             <div class="text">
@@ -285,8 +307,13 @@
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
                     <p class="price"><span>${{ $item->harga }}</span></p>
-                    <p><a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary"
-                        data-toggle="modal" data-bs-toggle="modal">Pesan</a></p>
+                    <p>
+                        @if ($item->stok == 'Tersedia')
+                            <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
+                        @else
+                            <a href="#" type="button" class="btn btn-danger btn-outline-danger" onclick="showOutOfStockAlert()">Pesan</a>
+                        @endif
+                    </p>
                 </div>
             </div>
             <div class="text">

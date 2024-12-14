@@ -13,7 +13,9 @@ class PengeluaranController extends Controller
      */
     public function index()
     {
-        $data['pengeluaran'] = \App\Models\Pengeluaran::latest()->paginate(10);
+        $query = \App\Models\Pengeluaran::latest();
+        $query->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()]);
+        $data['pengeluaran'] = $query->paginate(10);
         return view('/Pengeluaran/pengeluaran_index', $data);
     }
 
@@ -42,7 +44,11 @@ class PengeluaranController extends Controller
         $pengeluaran = new \App\Models\Pengeluaran();
         $pengeluaran->fill($requestData);
         $pengeluaran->save();
-        flash(message: 'Data Berhasil Ditambahkan')->success();
+        if ($pengeluaran) {
+            session()->flash('success', 'Menu berhasil ditambahkan!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Menu gagal ditambahkan!');
+        }
         return redirect('/Pengeluaran');
     }
 
@@ -89,7 +95,11 @@ class PengeluaranController extends Controller
     {
         $pesanan = \App\Models\Pengeluaran::findOrFail($id);
         $pesanan->delete();
-        flash('Data Pengeluaran Dihapus')->success();
+        if ($pesanan) {
+            session()->flash('success', 'Data berhasil dihapus!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Data gagal dihapus!');
+        }
         return back();
     }
 }

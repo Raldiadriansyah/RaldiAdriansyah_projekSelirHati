@@ -9,6 +9,7 @@ use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LaporanPenjualan;
+use App\Http\Controllers\LaporanPengeluaran;
 
 
 
@@ -19,6 +20,7 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::resource('Pengeluaran', PengeluaranController::class);
     Route::resource('user', UserController::class);
     Route::resource('laporan-penjualan', LaporanPenjualan::class);
+    Route::resource('laporan-pengeluaran', LaporanPengeluaran::class);
 });
 
 Route::resource('pesanan', PesananController::class);

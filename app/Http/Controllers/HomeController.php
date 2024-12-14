@@ -23,6 +23,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin_index');
+        $data['menu'] = \App\Models\Menu::latest()->get();
+
+        $query = \App\Models\pesanan::latest();
+        $query->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()]);
+        $data['jual'] = $query->get();
+
+        $penjualan = \App\Models\Menu::
+        whereIn('kategori', ['minuman-kopi', 'minuman-teh', 'minuman-milkshake','minuman-others', 'makanan', 'lainnya'])  // Filter by status
+        ->selectRaw('kategori, count(id) as total')
+        ->groupBy('kategori')
+        ->get();
+        
+        $data['penjualan'] = $penjualan;
+
+        $query = \App\Models\Pengeluaran::latest();
+        $query->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()]);
+        $data['keluar'] = $query->get();
+
+
+        return view('admin_index', $data);
     }
 }

@@ -11,19 +11,19 @@
                 <div class="form-group mt-3">
                     <label for="nama">Nama Barang/Belanja</label>
                     <input type="text" name="nama" class="form-control" value="{{ old('nama') }}"
-                        placeholder="Masukkan Nama Menu">
+                        placeholder="Masukkan Nama">
                     <span class="text-danger">{{ $errors->first('nama') }}</span>
                 </div>
                 <div class="form-group mt-3">
                     <label for="harga">Harga</label>
                     <input type="number" name="harga" class="form-control" value="{{ old('harga') }}"
-                        placeholder="Masukkan Harga Menu">
+                        placeholder="Masukkan Harga">
                     <span class="text-danger">{{ $errors->first('harga') }}</span>
                 </div>
                 <div class="form-group mt-3">
                     <label for="jumlah">Jumlah</label>
                     <input type="number" name="jumlah" class="form-control" value="{{ old('jumlah') }}"
-                        placeholder="Masukkan Harga Menu">
+                        placeholder="Masukkan Jumlah">
                     <span class="text-danger">{{ $errors->first('jumlah') }}</span>
                 </div>
                 <br>

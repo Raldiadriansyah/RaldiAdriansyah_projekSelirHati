@@ -17,6 +17,8 @@ class PenjualanController extends Controller
         } else {
             $query->where('status', 'baru');
         }
+        $query->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()]);
+
         $data['pesanan'] = $query->paginate(10);
         $data['status'] = $request->status ?? 'baru';
         return view('/Penjualan/Pesanan', $data);
