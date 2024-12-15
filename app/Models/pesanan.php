@@ -12,6 +12,7 @@ class pesanan extends Model
     protected $fillable = [
         'menu_id', 
         'admin_id',
+        'nama',
         'jumlah',
         'total',
         'status',

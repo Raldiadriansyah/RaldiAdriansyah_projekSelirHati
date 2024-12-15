@@ -27,7 +27,7 @@
                                 @csrf
                                 @method('delete')
                                 <button class="btn btn-danger btn-sm ml-2"
-                                    onclick="return.confirm('Yakin ingin menghapus data?')">
+                                id="delete">
                                     Hapus
                                 </button>
                             </form>

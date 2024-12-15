@@ -308,7 +308,7 @@
                 icon: 'success',
                 title: '{{ session('success') }}',
                 showConfirmButton: false,
-                timer: 2500,
+                timer: 2000,
                 backdrop: false,
             });
         });
@@ -323,7 +323,7 @@
                 icon: 'error',
                 title: '{{ session('error') }}',
                 showConfirmButton: false,
-                timer: 2500,
+                timer: 2000,
                 backdrop: false,
             });
         });
@@ -337,14 +337,14 @@
   
               e.preventDefault(); // Mencegah form langsung submit
               Swal.fire({
-                  title: "Are you sure?",
-                  text: "You won't be able to revert this!",
+                  title: "Apakah Anda Yakin?",
+                  text: "Jika ya maka data akan dihapus",
                   icon: "warning",
                   showCancelButton: true,
                   confirmButtonColor: "#3085d6",
                   cancelButtonColor: "#d33",
-                  confirmButtonText: "Yes, delete it!",
-                  cancelButtonText: "Cancel",
+                  confirmButtonText: "Ya, Hapus!",
+                  cancelButtonText: "Batal",
                   backdrop: false,
               }).then((result) => {
                   if (result.isConfirmed) {

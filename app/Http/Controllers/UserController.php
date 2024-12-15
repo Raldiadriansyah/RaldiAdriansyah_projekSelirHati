@@ -14,7 +14,11 @@ class UserController extends Controller
     {
         $pesanan = \App\Models\User::findOrFail($id);
         $pesanan->delete();
-        flash('Data Dihapus')->success();
+        if ($pesanan) {
+            session()->flash('success', 'Data berhasil dihapus!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Data gagal dihapus!');
+        }
         return back();
     }
     public function update(Request $request, string $id)
@@ -25,7 +29,11 @@ class UserController extends Controller
         ]);
         $user = \App\Models\User::findOrFail($id);
         $user->update($requestData);
-        flash('Data Menu sudah di Ubah')->success();
+        if ($user) {
+            session()->flash('success', 'Data berhasil diubah!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Data gagal diubah!');
+        }
         return back();
     }
 }

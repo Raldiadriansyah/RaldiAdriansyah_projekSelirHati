@@ -44,9 +44,16 @@
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
                             <p id="harga">Rp{{ $item->harga }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
-                            <label for="jumlah">Jumlah Pesanan:</label>
-                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah">
-                            <input type="hidden" name="customer" value="{{ old('jumlah') }}">
+                            <label style="display: flex; align-items: center;" for="nama">
+                                Nama Pemesan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" style="margin-bottom: 10px">
+                            <label style="display: flex; align-items: center;" for="jumlah">
+                                Jumlah Pesanan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah" placeholder="Masukkan Jumlah">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" id="">Pesan</button>
@@ -96,7 +103,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalTambahLabel">Tambah Pesanan</h5>
-                            <button type="button" class="btn-close" onclick="window.location.href='/pesanan';" aria-label="Close"></button>
+                            <a href="" onclick="closeModal()"></a>
                         </div>
 
                         <div class="modal-body">
@@ -105,9 +112,16 @@
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
                             <p id="harga">Rp{{ $item->harga }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
-                            <label for="jumlah">Jumlah Pesanan:</label>
-                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah">
-                            <input type="hidden" name="customer" value="{{ old('jumlah') }}">
+                            <label style="display: flex; align-items: center;" for="nama">
+                                Nama Pemesan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" style="margin-bottom: 10px">
+                            <label style="display: flex; align-items: center;" for="jumlah">
+                                Jumlah Pesanan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah" placeholder="Masukkan Jumlah">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" id="">Pesan</button>
@@ -155,7 +169,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalTambahLabel">Tambah Pesanan</h5>
-                            <button type="button" class="btn-close" onclick="window.location.href='/pesanan';" aria-label="Close"></button>
+                            <a href="" onclick="closeModal()"></a>
                         </div>
 
                         <div class="modal-body">
@@ -164,9 +178,16 @@
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
                             <p id="harga">Rp{{ $item->harga }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
-                            <label for="jumlah">Jumlah Pesanan:</label>
-                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah">
-                            <input type="hidden" name="customer" value="{{ old('jumlah') }}">
+                            <label style="display: flex; align-items: center;" for="nama">
+                                Nama Pemesan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" style="margin-bottom: 10px">
+                            <label style="display: flex; align-items: center;" for="jumlah">
+                                Jumlah Pesanan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah" placeholder="Masukkan Jumlah">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" id="">Pesan</button>
@@ -214,7 +235,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalTambahLabel">Tambah Pesanan</h5>
-                            <button type="button" class="btn-close" onclick="window.location.href='/pesanan';" aria-label="Close"></button>
+                            <a href="" onclick="closeModal()"></a>
                         </div>
 
                         <div class="modal-body">
@@ -223,9 +244,16 @@
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
                             <p id="harga">Rp{{ $item->harga }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
-                            <label for="jumlah">Jumlah Pesanan:</label>
-                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah">
-                            <input type="hidden" name="customer" value="{{ old('jumlah') }}">
+                            <label style="display: flex; align-items: center;" for="nama">
+                                Nama Pemesan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" style="margin-bottom: 10px">
+                            <label style="display: flex; align-items: center;" for="jumlah">
+                                Jumlah Pesanan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah" placeholder="Masukkan Jumlah">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" id="">Pesan</button>
@@ -273,7 +301,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalTambahLabel">Tambah Pesanan</h5>
-                            <button type="button" class="btn-close" onclick="window.location.href='/pesanan';" aria-label="Close"></button>
+                            <a href="" onclick="closeModal()"></a>
                         </div>
 
                         <div class="modal-body">
@@ -282,9 +310,16 @@
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
                             <p id="harga">Rp{{ $item->harga }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
-                            <label for="jumlah">Jumlah Pesanan:</label>
-                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah">
-                            <input type="hidden" name="customer" value="{{ old('jumlah') }}">
+                            <label style="display: flex; align-items: center;" for="nama">
+                                Nama Pemesan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" style="margin-bottom: 10px">
+                            <label style="display: flex; align-items: center;" for="jumlah">
+                                Jumlah Pesanan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah" placeholder="Masukkan Jumlah">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" id="">Pesan</button>
@@ -332,7 +367,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalTambahLabel">Tambah Pesanan</h5>
-                            <button type="button" class="btn-close" onclick="window.location.href='/pesanan';" aria-label="Close"></button>
+                            <a href="" onclick="closeModal()"></a>
                         </div>
 
                         <div class="modal-body">
@@ -341,9 +376,16 @@
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
                             <p id="harga">Rp{{ $item->harga }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
-                            <label for="jumlah">Jumlah Pesanan:</label>
-                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah">
-                            <input type="hidden" name="customer" value="{{ old('jumlah') }}">
+                            <label style="display: flex; align-items: center;" for="nama">
+                                Nama Pemesan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" style="margin-bottom: 10px">
+                            <label style="display: flex; align-items: center;" for="jumlah">
+                                Jumlah Pesanan :
+                                <p style="margin: 0 0 0 4px; color: red;">(wajib diisi)</p>
+                            </label>
+                            <input type="number" class="form-control" id="jumlah" min="1" name="jumlah" placeholder="Masukkan Jumlah">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" id="">Pesan</button>
@@ -353,4 +395,5 @@
             </form>
         </div>
     @endforeach
+    
 @endsection

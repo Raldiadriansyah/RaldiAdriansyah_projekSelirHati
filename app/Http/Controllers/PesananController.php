@@ -45,7 +45,8 @@ class PesananController extends Controller
         $requestData = $request->validate([
             'menu_id' => 'required|exists:menus,id',
             'admin_id' => 'nullable',
-            'jumlah' => 'required|numeric',
+            'nama' => 'required|string|max:255',
+            'jumlah' => 'required|numeric|min:1',
             'harga' => 'required|numeric',
             'total' => 'nullable',
             'status' => 'nullable',
@@ -98,7 +99,11 @@ class PesananController extends Controller
         $requestData['total'] = $requestData['jumlah'] * $requestData['harga'];
         $pesanan = \App\Models\pesanan::findOrFail($id);
         $pesanan->update($requestData);
-        flash('Data Menu sudah di Ubah')->success();
+        if ($pesanan) {
+            session()->flash('success', 'Pesanan berhasil diubah!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Pesanan gagal diubah!');
+        }
         return back();
     }
 
@@ -109,7 +114,11 @@ class PesananController extends Controller
     {
         $pesanan = \App\Models\pesanan::findOrFail($id);
         $pesanan->delete();
-        flash('Data Menu Dihapus')->success();
+        if ($pesanan) {
+            session()->flash('success', 'Pesanan berhasil dihapus!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Pesanan gagal dihapus!');
+        }
         return back();
     }
 }

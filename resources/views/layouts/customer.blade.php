@@ -5,7 +5,7 @@
     <title>Daftar Menu</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <link rel="icon" type="image/x-icon" href="/sneat/assets/img/backgrounds/warkop.png" />
+    <link rel="icon" type="image/x-icon" href="/sneat/assets/img/backgrounds/warkop.png" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
@@ -64,6 +64,15 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/sneat/assets/js/config.js"></script>
 </head>
+<style>
+    body {
+        background-image: url('/sneat/assets/img/backgrounds/bg.jpeg');
+        background-size: unset;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+</style>
 
 <body>
 
@@ -72,9 +81,11 @@
         <div class="container">
             <div class="row justify-content-center mb-2">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="app-brand-text demo menu-text fw-bolder ms-2" ><img src="/sneat/assets/img/backgrounds/warkop.png" alt="" style="width: 300px; margin: auto; "></span>
+                    <span class="app-brand-text demo menu-text fw-bolder ms-2"><img
+                            src="/sneat/assets/img/backgrounds/warkop.png" alt=""
+                            style="width: 300px; margin: auto; "></span>
                     <br>
-                    
+
                 </div>
             </div>
             <div class="row d-md-flex">
@@ -117,9 +128,10 @@
                         <div class="tab-content ftco-animate" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
                                 aria-labelledby="v-pills-1-tab">
-                                <div class="row justify-content-center mb-5" >
-                                    <div class="col-md-3 heading-section text-center ftco-animate" >
-                                        <span style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Kopi</b></span>
+                                <div class="row justify-content-center mb-5">
+                                    <div class="col-md-3 heading-section text-center ftco-animate">
+                                        <span
+                                            style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Kopi</b></span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -130,8 +142,9 @@
                             <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
                                 aria-labelledby="v-pills-2-tab">
                                 <div class="row justify-content-center mb-5">
-                                    <div class="col-md-3 heading-section text-center ftco-animate" >
-                                        <span style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Teh</b></span>
+                                    <div class="col-md-3 heading-section text-center ftco-animate">
+                                        <span
+                                            style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Teh</b></span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -142,8 +155,9 @@
                             <div class="tab-pane fade" id="v-pills-3" role="tabpanel"
                                 aria-labelledby="v-pills-3-tab">
                                 <div class="row justify-content-center mb-5">
-                                    <div class="col-md-3 heading-section text-center ftco-animate" >
-                                        <span style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Milkshake</b></span>
+                                    <div class="col-md-3 heading-section text-center ftco-animate">
+                                        <span
+                                            style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Milkshake</b></span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -154,8 +168,9 @@
                             <div class="tab-pane fade" id="v-pills-4" role="tabpanel"
                                 aria-labelledby="v-pills-4-tab">
                                 <div class="row justify-content-center mb-5">
-                                    <div class="col-md-3 heading-section text-center ftco-animate" >
-                                        <span style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Others</b></span>
+                                    <div class="col-md-3 heading-section text-center ftco-animate">
+                                        <span
+                                            style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Others</b></span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -166,8 +181,9 @@
                             <div class="tab-pane fade" id="v-pills-5" role="tabpanel"
                                 aria-labelledby="v-pills-5-tab">
                                 <div class="row justify-content-center mb-5">
-                                    <div class="col-md-3 heading-section text-center ftco-animate" >
-                                        <span style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Makanan</b></span>
+                                    <div class="col-md-3 heading-section text-center ftco-animate">
+                                        <span
+                                            style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Makanan</b></span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -178,8 +194,9 @@
                             <div class="tab-pane fade" id="v-pills-6" role="tabpanel"
                                 aria-labelledby="v-pills-6-tab">
                                 <div class="row justify-content-center mb-5">
-                                    <div class="col-md-3 heading-section text-center ftco-animate" >
-                                        <span style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Lainnya</b></span>
+                                    <div class="col-md-3 heading-section text-center ftco-animate">
+                                        <span
+                                            style="font-family: cursive ; font-style: oblique; font-size: 40px; color: #c7b705"><b>Lainnya</b></span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -254,15 +271,20 @@
                 title: 'Stok kosong',
                 text: 'Maaf, Item saat ini tidak tersedia.',
                 showConfirmButton: true,
-                backdrop: false,  
+                backdrop: false,
             });
         }
     </script>
-    
-      <script type="text/javascript">
-        function closeModal() {      
-            $('#modalTambah').modal('hide');
-        }
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('#modalTambah').length && !$(event.target).closest(
+                        '.modal-dialog').length) {
+                    $('#modalTambah').modal('hide');
+                }
+            });
+        });
     </script>
 
 

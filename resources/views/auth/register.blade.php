@@ -3,9 +3,15 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <span class="app-brand-text demo menu-text fw-bolder ms-2"><img
+                            src="/sneat/assets/img/backgrounds/warkop.png" alt=""
+                            style="width: 200px; margin: auto; margin-top: 22px; margin-left: 230px"></span>
+                    <br>
+
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -61,7 +67,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
+                        <div class="row mb-0" style="margin-left: 75px">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}

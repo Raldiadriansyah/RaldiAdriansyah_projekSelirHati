@@ -17,6 +17,7 @@
         <table class="table table-striped">
             <tr>
                 <th>No</th>
+                <th>Nama Pemesan</th>
                 <th>Menu</th>
                 <th>Harga</th>
                 <th>Jumlah</th>
@@ -29,6 +30,7 @@
                 @foreach ($pesanan as $item)
                     <tr>
                         <td> {{ $loop->iteration }}</td>
+                        <td> {{ $item->nama }}</td>
                         <td> {{ $item->Menu->nama }}</td>
                         <td> {{ $item->Menu->harga }}</td>
                         <td> {{ $item->jumlah }}</td>
@@ -39,17 +41,21 @@
                         {{ $item->status }}
                     </td>
                         <td>{{ $item->User->name ?? ' ----- ' }}</td>
+                        @if (($item->status == 'baru' || $item->status == 'diproses'))
                         <td>
                             <a href="#modalEdit{{ $item->id }}" class="btn btn-warning btn-sm ml-2"  data-toggle="modal" data-bs-toggle="modal">Edit</a>
                             <form action="/pesanan/{{ $item->id }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('delete')
                                 <button class="btn btn-danger btn-sm ml-2"
-                                    onclick="return.confirm('Yakin ingin menghapus data?')">
+                                id="delete">
                                     Hapus
                                 </button>
                             </form>
                         </td>
+                        @elseif (($item->status=='selesai'))
+                           <td><i>Tidak Ada Aksi</i></td>
+                        @endif
                     </tr>
                 @endforeach
             </tbody>

@@ -45,9 +45,9 @@ class PengeluaranController extends Controller
         $pengeluaran->fill($requestData);
         $pengeluaran->save();
         if ($pengeluaran) {
-            session()->flash('success', 'Menu berhasil ditambahkan!');
+            session()->flash('success', 'Data berhasil ditambahkan!');
         } else {
-            session()->flash('error', 'Terjadi kesalahan, Menu gagal ditambahkan!');
+            session()->flash('error', 'Terjadi kesalahan, Data gagal ditambahkan!');
         }
         return redirect('/Pengeluaran');
     }
@@ -84,7 +84,11 @@ class PengeluaranController extends Controller
         $requestData['admin_id'] = auth()->id();
         $pengeluaran = \App\Models\Pengeluaran::findOrFail($id);
         $pengeluaran->update($requestData);
-        flash('Data sudah di Ubah')->success();
+        if ($pengeluaran) {
+            session()->flash('success', 'Data berhasil diubah!');
+        } else {
+            session()->flash('error', 'Terjadi kesalahan, Data gagal diubah!');
+        }
         return back();
     }
 
@@ -99,7 +103,7 @@ class PengeluaranController extends Controller
             session()->flash('success', 'Data berhasil dihapus!');
         } else {
             session()->flash('error', 'Terjadi kesalahan, Data gagal dihapus!');
-        }
+        } 
         return back();
     }
 }
