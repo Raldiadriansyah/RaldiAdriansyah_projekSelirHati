@@ -6,7 +6,9 @@
         <br>
         <h3 style="margin-top: 30px">Laporan Pengeluaran</h3>
     @endsection
-    <button id="buttonPrint" class="btn btn-primary mb-3">Cetak Laporan</button>
+    <button id="buttonPrint" class="btn btn-primary mb-3">
+        <i class="fas fa-print"></i> Cetak Laporan
+    </button>
     <table class="table table-striped">
         <tr>
             <th>No</th>

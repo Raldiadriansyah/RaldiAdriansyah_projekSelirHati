@@ -25,7 +25,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="mb-1"><b>Total Daftar Menu</b></p>
+                            <p class="mb-1"><b>Total Menu</b></p>
                             <h4 class="card-title mb-2" style="font-size: 20px;">{{ $menu->count('id') }}</h4>
                             <div class="d-flex align-items-center" style="gap: 20px; font-size: 20px">
                                 <small class="text-success fw-medium me-4">

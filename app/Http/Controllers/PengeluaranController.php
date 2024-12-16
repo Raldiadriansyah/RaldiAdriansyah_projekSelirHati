@@ -15,7 +15,7 @@ class PengeluaranController extends Controller
     {
         $query = \App\Models\Pengeluaran::latest();
         $query->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()]);
-        $data['pengeluaran'] = $query->paginate(10);
+        $data['pengeluaran'] = $query->get();
         return view('/Pengeluaran/pengeluaran_index', $data);
     }
 

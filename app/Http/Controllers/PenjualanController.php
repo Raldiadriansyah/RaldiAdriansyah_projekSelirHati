@@ -19,7 +19,7 @@ class PenjualanController extends Controller
         }
         $query->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()]);
 
-        $data['pesanan'] = $query->paginate(10);
+        $data['pesanan'] = $query->get();
         $data['status'] = $request->status ?? 'baru';
         return view('/Penjualan/Pesanan', $data);
     }

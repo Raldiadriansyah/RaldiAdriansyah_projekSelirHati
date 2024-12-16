@@ -25,7 +25,7 @@ class MenuController extends Controller
                 $query->where('kategori', $request->kategori);
             }
         }
-        $data['menu'] = $query->paginate(10);
+        $data['menu'] = $query->get();
         $data['kategori'] = $request->kategori ?? 'Semua';
         return view('/Menu/Menu_index', $data);
     }

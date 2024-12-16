@@ -7,6 +7,7 @@
             <h3 style="margin-top: 30px">Data User</h3>
         @endsection
         <table class="table table-striped">
+         <thead>
             <tr>
                 <th>No</th>
                 <th>Nama</th>
@@ -14,6 +15,7 @@
                 <th>Role</th>
                 <th>Aksi</th>
             </tr>
+         </thead>
             <tbody>
                 @foreach ($user as $item)
                     <tr>
