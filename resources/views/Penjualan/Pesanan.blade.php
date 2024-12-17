@@ -42,9 +42,9 @@
                         <td> {{ $loop->iteration }}</td>
                         <td class="pesanan-name"> {{ $item->nama }}</td>
                         <td> {{ $item->Menu->nama }}</td>
-                        <td> {{ $item->Menu->harga }}</td>
+                        <td> {{ number_format($item->Menu->harga) }}</td>
                         <td> {{ $item->jumlah }}</td>
-                        <td> {{ $item->total }}</td>
+                        <td> {{ number_format($item->total) }}</td>
                         <td style="
                         color: 
                             {{ $item->status == 'baru' ? '#7FFF00' : ($item->status == 'diproses' ? '#FFC107' : ($item->status == 'selesai' ? '#0D6EFD' : '#000')) }}">

@@ -25,9 +25,9 @@
                     <tr>
                         <td> {{ $loop->iteration }}</td>
                         <td> {{ $item->Menu->nama }}</td>
-                        <td> {{ $item->Menu->harga }}</td>
+                        <td> {{ number_format($item->Menu->harga) }}</td>
                         <td> {{ $item->jumlah }}</td>
-                        <td> {{ $item->total }}</td>
+                        <td> {{ number_format($item->total) }}</td>
                         <td> {{ $item->status }}</td>
                         <td>{{ $item->User->name ?? ' ----- ' }}</td>
 
@@ -40,7 +40,7 @@
                 <td></td>
                 <td></td>
                 <td><b>Total Penjualan :</b></td>
-                <td><b>{{ $models->sum('total') }}</b></td>
+                <td><b>{{ number_format($models->sum('total')) }}</b></td>
                 <td></td>
                 <td></td>
             </tr>
@@ -70,9 +70,9 @@
                 <tr>
                     <td  style="border: 1px solid #ddd; padding: 8px;">{{ $loop->iteration }}</td>
                     <td  style="border: 1px solid #ddd; padding: 8px;">{{ $item->Menu->nama }}</td>
-                    <td  style="border: 1px solid #ddd; padding: 8px;">{{ $item->Menu->harga }}</td>
+                    <td  style="border: 1px solid #ddd; padding: 8px;">{{ number_format($item->Menu->harga) }}</td>
                     <td  style="border: 1px solid #ddd; padding: 8px;">{{ $item->jumlah }}</td>
-                    <td  style="border: 1px solid #ddd; padding: 8px;">{{ $item->total }}</td>
+                    <td  style="border: 1px solid #ddd; padding: 8px;">{{ number_format($item->total) }}</td>
                     <td  style="border: 1px solid #ddd; padding: 8px;">{{ $item->status }}</td>
                     <td  style="border: 1px solid #ddd; padding: 8px;">{{ $item->User->name ?? ' ----- ' }}</td>
                 </tr>
@@ -80,7 +80,7 @@
         </tbody>
     </table>
     <br><br>
-    <b style="margin-left: 290px">Total Penjualan : <b style="margin-left: 22px">{{ $models->sum('total') }}</b></b>
+    <b style="margin-left: 290px">Total Penjualan : <b style="margin-left: 22px">{{ number_format($models->sum('total')) }}</b></b>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

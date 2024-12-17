@@ -9,7 +9,7 @@
                                 <div class="text">
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
-                    <p class="price"><span>Rp.{{ $item->harga }}</span></p>
+                    <p class="price"><span>Rp. {{ number_format($item->harga) }}</span></p>
                     <p>
                         @if ($item->stok == 'Tersedia')
                             <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
@@ -42,7 +42,7 @@
                             <input type="hidden" name="menu_id" value="{{ $item->id }}">
                             <h6 id="menu">{{ $item->nama }}</h6>
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
-                            <p id="harga">Rp{{ $item->harga }}</p>
+                            <p id="harga">Rp. {{ number_format($item->harga) }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
                             <label style="display: flex; align-items: center;" for="nama">
                                 Nama Pemesan :
@@ -77,7 +77,7 @@
                                 <div class="text">
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
-                    <p class="price"><span>${{ $item->harga }}</span></p>
+                    <p class="price"><span>Rp. {{ number_format($item->harga) }}</span></p>
                     <p>
                         @if ($item->stok == 'Tersedia')
                             <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
@@ -110,7 +110,7 @@
                             <input type="hidden" name="menu_id" value="{{ $item->id }}">
                             <h6 id="menu">{{ $item->nama }}</h6>
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
-                            <p id="harga">Rp{{ $item->harga }}</p>
+                            <p id="harga">Rp. {{ number_format($item->harga) }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
                             <label style="display: flex; align-items: center;" for="nama">
                                 Nama Pemesan :
@@ -143,7 +143,7 @@
                                 <div class="text">
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
-                    <p class="price"><span>${{ $item->harga }}</span></p>
+                    <p class="price"><span>Rp. {{ number_format($item->harga) }}</span></p>
                     <p>
                         @if ($item->stok == 'Tersedia')
                             <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
@@ -176,7 +176,7 @@
                             <input type="hidden" name="menu_id" value="{{ $item->id }}">
                             <h6 id="menu">{{ $item->nama }}</h6>
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
-                            <p id="harga">Rp{{ $item->harga }}</p>
+                            <p id="harga">Rp. {{ number_format($item->harga) }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
                             <label style="display: flex; align-items: center;" for="nama">
                                 Nama Pemesan :
@@ -209,7 +209,7 @@
                                 <div class="text">
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
-                    <p class="price"><span>${{ $item->harga }}</span></p>
+                    <p class="price"><span>Rp. {{ number_format($item->harga) }}</span></p>
                     <p>
                         @if ($item->stok == 'Tersedia')
                             <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
@@ -242,7 +242,7 @@
                             <input type="hidden" name="menu_id" value="{{ $item->id }}">
                             <h6 id="menu">{{ $item->nama }}</h6>
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
-                            <p id="harga">Rp{{ $item->harga }}</p>
+                            <p id="harga">Rp. {{ number_format($item->harga) }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
                             <label style="display: flex; align-items: center;" for="nama">
                                 Nama Pemesan :
@@ -275,7 +275,7 @@
                                 <div class="text">
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
-                    <p class="price"><span>${{ $item->harga }}</span></p>
+                    <p class="price"><span>Rp. {{ number_format($item->harga) }}</span></p>
                     <p>
                         @if ($item->stok == 'Tersedia')
                             <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
@@ -308,7 +308,7 @@
                             <input type="hidden" name="menu_id" value="{{ $item->id }}">
                             <h6 id="menu">{{ $item->nama }}</h6>
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
-                            <p id="harga">Rp{{ $item->harga }}</p>
+                            <p id="harga">Rp. {{ number_format($item->harga) }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
                             <label style="display: flex; align-items: center;" for="nama">
                                 Nama Pemesan :
@@ -341,7 +341,7 @@
                                 <div class="text">
                     <h2>{{ $item->nama }} <h4>( {{ $item->stok }} )</h4>
                     </h2>
-                    <p class="price"><span>${{ $item->harga }}</span></p>
+                    <p class="price"><span>Rp. {{ number_format($item->harga) }}</span></p>
                     <p>
                         @if ($item->stok == 'Tersedia')
                             <a href="#modalTambah{{ $item->id }}" type="button" class="btn btn-primary btn-outline-primary" data-toggle="modal" data-bs-toggle="modal">Pesan</a>
@@ -374,7 +374,7 @@
                             <input type="hidden" name="menu_id" value="{{ $item->id }}">
                             <h6 id="menu">{{ $item->nama }}</h6>
                             <input type="hidden" name="menu" value="{{ $item->nama }}">
-                            <p id="harga">Rp{{ $item->harga }}</p>
+                            <p id="harga">Rp. {{ number_format($item->harga) }}</p>
                             <input type="hidden" name="harga" value="{{ $item->harga }}">
                             <label style="display: flex; align-items: center;" for="nama">
                                 Nama Pemesan :

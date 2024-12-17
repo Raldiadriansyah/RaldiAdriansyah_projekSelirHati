@@ -89,7 +89,7 @@
                             <p class="mb-1" style="font-size: 22px"><b>Total Penjualan</b></p>
                             <small class="text-success fw-medium" style="font-size: 23px"><i
                                     class='bx bx-up-arrow-alt'></i>Rp.
-                                {{ $jual->where('status', 'selesai')->sum('total') }}</small>
+                                {{ number_format($jual->where('status', 'selesai')->sum('total')) }}</small>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                             </div>
                             <p class="mb-1" style="font-size: 22px"><b>Total Pengeluaran</b></p>
                             <small class="text-warning fw-medium" style="font-size: 23px"><i
-                                    class='bx bx-down-arrow-alt'></i>Rp. {{ $keluar->sum('total') }}</small>
+                                    class='bx bx-down-arrow-alt'></i>Rp. {{ number_format($keluar->sum('total')) }}</small>
                         </div>
                     </div>
                 </div>

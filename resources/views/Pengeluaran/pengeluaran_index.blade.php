@@ -30,9 +30,9 @@
                     <tr>
                         <td> {{ $loop->iteration }}</td>
                         <td class="pengeluaran-name"> {{ $item->nama }}</td>
-                        <td> {{ $item->harga }}</td>
+                        <td> {{number_format( $item->harga )}}</td>
                         <td> {{ $item->jumlah }}</td>
-                        <td> {{ $item->total }}</td>
+                        <td> {{ number_format($item->total) }}</td>
                         <td>{{ $item->User->name ?? ' ----- ' }}</td>
                         <td>
                             <a href="#modalEdit{{ $item->id }}" class="btn btn-warning btn-sm ml-2"  data-toggle="modal" data-bs-toggle="modal">Edit</a>

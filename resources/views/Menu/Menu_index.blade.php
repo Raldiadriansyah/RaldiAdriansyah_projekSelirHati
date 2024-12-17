@@ -47,7 +47,7 @@
                     <tr>
                         <td> {{ $loop->iteration }}</td>
                         <td class="menu-name"> {{ $item->nama }}</td>
-                        <td> {{ $item->harga }}</td>
+                        <td> {{ number_format($item->harga) }}</td>
                         <td> {{ $item->kategori }}</td>
                         <td>
                             @if ($item->foto)
